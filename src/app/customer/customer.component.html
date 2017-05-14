@@ -2,7 +2,26 @@
     <div class="panel-heading">
         Sign Up!
     </div>
-
+    <!-- start 
+     <fieldset><legend><h2>Source as HTTP URI String</h2></legend>
+    <ngui-utils-4>
+      <input  ngui-auto-complete
+        id="model4"
+        [(ngModel)]="model4"
+        placeholder="Enter Address(min. 2 chars)"
+        [source]="googleGeoCode" 
+        no-match-found-text="No Match Found"
+        list-formatter="formatted_address"
+        path-to-data="results"
+        loading-text="Google Is Thinking..."
+        max-num-list="5"
+        min-chars="2" />
+    <!--  <br/>selected model4: {{model4 | json}}<br/><br/>
+    </ngui-utils-4>
+    <pre>{{templateStr | htmlCode:'ngui-utils-4'}}</pre>
+    <pre> source: {{googleGeoCode}}</pre>
+  </fieldset>-->
+<!-- end -->
     <div class="panel-body">
         <form class="form-horizontal"
               novalidate
@@ -35,6 +54,111 @@
                     </div>
                 </div>
 
+ <div class="form-group"
+                    [ngClass]="{'has-error': (UserNameVar.touched || UserNameVar.dirty) && !UserNameVar.valid }">
+                    <label class="col-md-2 control-label" 
+                           for="UserNameId">User Name</label>
+                   <div class="col-md-8">
+                        <ngui-utils-4>
+                            <input  ngui-auto-complete
+                                id="UserNameId"
+                                [(ngModel)]="customer.UserNameId"
+                                placeholder="Enter Address(min. 2 chars)"
+                                [source]="googleGeoCode" 
+                                no-match-found-text="No Match Found"
+                                list-formatter="DisplayText"
+                                path-to-data="results"
+                                loading-text="Google Is Thinking..."
+                                minlength="2"
+                                max-num-list="5"
+                                name="UserNameId"
+                                #UserNameVar="ngModel"
+                                min-chars="2" />
+                                <br/>selected model4: {{customer.UserNameId | json}}<br/><br/>
+                                </ngui-utils-4>
+                                  <pre> source: {{googleGeoCode}}</pre>
+                                 <span class="help-block" *ngIf="(UserNameVar.touched || UserNameVar.dirty) && UserNameVar.errors">
+                            <span *ngIf="UserNameVar.errors.required">
+                                Please select user name.
+                            </span>
+                            <span *ngIf="UserNameVar.errors.minlength">
+                                Please enter atleast 2 characters to search for user.
+                            </span>
+                            
+                        </span>
+                    </div>
+                </div>
+                <!-- test-->
+<div class="form-group"
+                    [ngClass]="{'has-error': (UserName01Var.touched || UserName01Var.dirty) && !UserName01Var.valid }">
+                    <label class="col-md-2 control-label" 
+                           for="UserName01Id">User Name 01</label>
+                   <div class="col-md-8">
+                        <ngui-utils-4>
+                            <input  ngui-auto-complete
+                                id="UserName01Id"
+                                [(ngModel)]="customer.UserName01Id"
+                                placeholder="Enter Address(min. 2 chars)"
+                                [source]="googleGeoCode" 
+                                no-match-found-text="No Match Found"
+                                list-formatter="DisplayText"
+                                path-to-data="results"
+                                loading-text="Google Is Thinking..."
+                                minlength="2"
+                                max-num-list="5"
+                                name="UserName01Id"
+                                #UserName01Var="ngModel"
+                                min-chars="2" />
+                                <br/>selected model4: {{customer.UserName01Id | json}}<br/><br/>
+                                </ngui-utils-4>
+                                <span class="help-block" *ngIf="(UserName01Var.touched || UserName01Var.dirty) && UserName01Var.errors">
+                            <span *ngIf="UserName01Var.errors.required">
+                                Please select user name 01.
+                            </span>
+                            <span *ngIf="UserName01Var.errors.minlength">
+                                Please enter atleast 2 characters to search for user.
+                            </span>
+                            
+                        </span>
+                    </div>
+                </div>
+ 
+
+ <div class="form-group"
+                    [ngClass]="{'has-error': (UserName02Var.touched || UserName02Var.dirty) && !UserName02Var.valid }">
+                    <label class="col-md-2 control-label" 
+                           for="UserName02Id">User Name 02</label>
+                   <div class="col-md-8">
+                        <ngui-utils-4>
+                            <input  ngui-auto-complete
+                                id="UserName02Id"
+                                [(ngModel)]="customer.UserName02Id"
+                                placeholder="Enter Address(min. 2 chars)"
+                                [source]="googleGeoCode" 
+                                no-match-found-text="No Match Found"
+                                list-formatter="DisplayText"
+                                path-to-data="results"
+                                loading-text="Google Is Thinking..."
+                                minlength="2"
+                                max-num-list="5"
+                                name="UserName02Id"
+                                #UserName02Var="ngModel"
+                                min-chars="2" />
+                                <br/>selected model4: {{customer.UserName02Id | json}}<br/><br/>
+                                </ngui-utils-4>
+                                <span class="help-block" *ngIf="(UserName02Var.touched || UserName02Var.dirty) && UserName02Var.errors">
+                            <span *ngIf="UserName02Var.errors.required">
+                                Please select user name 01.
+                            </span>
+                            <span *ngIf="UserName02Var.errors.minlength">
+                                Please enter atleast 2 characters to search for user.
+                            </span>
+                            
+                        </span>
+                    </div>
+                </div>
+ 
+                <!--test-->
                 <div class="form-group"
                     [ngClass]="{'has-error': (lastNameVar.touched || lastNameVar.dirty) && !lastNameVar.valid }">
                     <label class="col-md-2 control-label" 

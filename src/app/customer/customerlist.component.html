@@ -27,15 +27,23 @@
                    *ngIf='products && products.length'>
                 <thead>
                     <tr>
+                        <th>Edit</th>
                         <th>FirstName</th>
                         <th>LastName</th>
+                        <th>UserName</th>
+                        <th>UserName01</th>
+                        <th>UserName02</th>
                         <th>Email</th>
                        </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor='let product of products'>
+                        <td><a [routerLink]="['/customeredit', product.ID]"> {{ product.ID }}</a></td>
                         <td>{{product.FirstName}}</td>
                         <td>{{ product.LastName }}</td>
+                        <td>{{ product.UserNameId }}</td>
+                        <td>{{ product.UserName01Id }}</td>
+                        <td>{{ product.UserName02Id }}</td>
                         <td>{{ product.Email }}</td>
                     </tr>
                 </tbody>

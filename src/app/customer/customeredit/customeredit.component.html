@@ -1,0 +1,36 @@
+
+  <div>
+      
+    </div>
+<h3><i>Showing product details for product: {{id}}</i></h3>
+<form [formGroup]="heroForm" (ngSubmit)="onSubmit($event)" novalidate>
+   <div style="margin-bottom: 1em">
+    <button type="submit"
+            [disabled]="heroForm.pristine" class="btn btn-success">Save</button> &nbsp;
+    <button type="reset" (click)="revert()"
+            [disabled]="heroForm.pristine" class="btn btn-danger">Revert</button>
+  </div>
+  <div class="form-group">
+    <label class="center-block">First Name:
+      <input class="form-control" formControlName="FirstName">
+    </label>
+    <label class="center-block">Last Name:
+      <input class="form-control" formControlName="LastName">
+    </label>
+    <label class="center-block">Email:
+      <input class="form-control" formControlName="Email">
+    </label>
+    <label class="center-block">UserName:
+      <input class="form-control" formControlName="UserNameId">
+    </label>
+    <label class="center-block">UserName01:
+      <input class="form-control" formControlName="UserName01Id">
+    </label>
+    <label class="center-block">UserName02:
+      <input class="form-control" formControlName="UserName02Id">
+    </label>
+  </div>
+</form>
+<p>Form value: {{ heroForm.value | json }}</p>
+<p>Form status: {{ heroForm.status | json }}</p>
+
